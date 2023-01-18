@@ -61,5 +61,18 @@ public class MainController {
 		
 	}
 	
+	// Update  handler--->>
+	
+		@RequestMapping("/update/{productId}")
+		public String updateProduct( @PathVariable("productId") int productId ,Model m)
+		{
+			Product theSingleProduct = this.productDao.getTheSingleProduct(productId);
+		//	System.out.println(theSingleProduct);
+			m.addAttribute("p", theSingleProduct); 
+			return "update_form";
+			
+		}
+	
+	
 	
 }

@@ -16,9 +16,10 @@
         
            <context:component-scan base-package="productcrudapp" />
            
-             <bean class="org.springframework.orm.hibernate5.HibernateTransactionManager" id="transactionManager">
-        <property name="sessionFactory" ref="sessionFactory"/>
+           <bean class="org.springframework.orm.hibernate5.HibernateTransactionManager" id="transactionManager">
+        <property name="sessionFactory" ref="sessionFactory" ></property>
     </bean>
+             
            
             <bean class="org.springframework.jdbc.datasource.DriverManagerDataSource" id="ds">
         <property name="driverClassName" value="com.mysql.cj.jdbc.Driver"/>

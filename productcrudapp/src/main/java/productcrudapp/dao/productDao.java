@@ -20,7 +20,7 @@ public class productDao {
 //create--->>>
 @Transactional
 public void createProduct(Product product) {
-	this.hibernateTemplate.save(product);
+	this.hibernateTemplate.saveOrUpdate(product);
 }
 //get all product--->>>
 public List<Product> getAllProducts(){
@@ -35,11 +35,12 @@ public void dltProoduct(int productId) {
 	Product p1 = this.hibernateTemplate.load(Product.class, productId);// yhan wo product nikal liya jo dlt karna
 	this.hibernateTemplate.delete(p1);//yhan dlt main main project de diya aur dlt kr diya
 }
-//Get the single project--->>>
+//Get the single product--->>>
 @Transactional
-public Product getTheSingleProduct(int productid) {
-	Product p1 = this.hibernateTemplate.get(Product.class,productid);
+public Product getTheSingleProduct(int productId) {
+	Product p1 = this.hibernateTemplate.get(Product.class,productId);
 	return p1;
 	
 }
+
 }

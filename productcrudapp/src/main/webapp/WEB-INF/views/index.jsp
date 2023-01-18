@@ -36,6 +36,9 @@
       <td>
       <a href="delete/${p.productId}"><i class="fa-sharp fa-solid fa-trash"></i></a>
       </td>
+      <td>
+       <a href="update/${p.productId }"><i class="fa-solid fa-file-pen" ></i></a>
+      </td>
     </tr>
     
     </c:forEach>
