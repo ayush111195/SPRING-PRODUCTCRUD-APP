@@ -68,7 +68,7 @@ public class MainController {
 		{
 			Product theSingleProduct = this.productDao.getTheSingleProduct(productId);
 		//	System.out.println(theSingleProduct);
-			m.addAttribute("p", theSingleProduct); 
+			m.addAttribute("p",theSingleProduct); 
 			return "update_form";
 			
 		}
