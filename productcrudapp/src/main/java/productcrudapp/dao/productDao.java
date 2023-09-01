@@ -12,7 +12,7 @@ import productcrudapp.model.Product;
 
 @Component
 
-public class productDao {
+public class productDao{
 	
 @Autowired
 	private HibernateTemplate hibernateTemplate;
