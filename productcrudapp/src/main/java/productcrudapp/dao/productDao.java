@@ -40,6 +40,7 @@ public void dltProoduct(int productId) {
 public Product getTheSingleProduct(int productId) {
 	Product p1 = this.hibernateTemplate.get(Product.class,productId);
 	return p1;
+
 	
 }
 
